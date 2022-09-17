@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package levelservice;
+
+// The greeting service definition.
+service LevelService {
+    // Sends a greeting
+    rpc Query (LevelRequest) returns (LevelReply) {}
+}
+
+  // The request message containing the level data.
+message LevelRequest {
+    string name = 1;
+}
+
+ // The response message containing the result.
+message LevelReply {
+    string message = 1;
+}

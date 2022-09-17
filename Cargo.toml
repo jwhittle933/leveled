@@ -1,0 +1,25 @@
+[package]
+name = "leveled"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jonathan Whittle <jonathan.m.whittle@gmail.com>"]
+
+[dependencies]
+async-stream = "0.2"
+axum = "0.5.16"
+futures = "0.3"
+hyper = { version = "0.14", features = ["full"] }
+leveldb = { package = "rusty-leveldb", version = "1.0.4" }
+prost = "0.11"
+tonic = "0.8.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tokio-stream = "0.1"
+tower = { version = "0.4", features = ["full"] }
+tower-http = { version = "0.3.0", features = ["cors"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[build-dependencies]
+tonic-build = "0.8"
